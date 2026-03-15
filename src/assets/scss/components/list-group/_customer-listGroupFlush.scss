@@ -1,0 +1,20 @@
+.customer-listGroupFlush {
+	.list-group {
+		background-color: transparent;
+	}
+	.list-group-item {
+		border-bottom: 1px solid $primary-300;
+		background-color: transparent;
+		padding: 24px 12px;
+		margin-bottom: 8px;
+		display: flex;
+		align-items: center;
+		gap: 80px;
+	}
+	@include pad {
+		.list-group-item {
+			padding: 12px 0;
+			gap: 24px;
+		}
+	}
+}

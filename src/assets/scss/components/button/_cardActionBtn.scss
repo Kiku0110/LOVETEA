@@ -1,0 +1,30 @@
+.cardActionBtn {
+	width: fit-content;
+	height: 44px;
+	padding: 12.5px 0;
+	font-weight: 700;
+	color: $secondary-500;
+	background: transparent;
+	border: none;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		bottom: 0;
+		background-color: $secondary-500;
+	}
+	&:hover {
+		color: #735443;
+		&::before {
+			background-color: #735443; // 底線同步變色
+		}
+	}
+	&:focus {
+		color: #735443;
+		&::before {
+			background-color: #735443; // 底線同步變色
+		}
+	}
+}

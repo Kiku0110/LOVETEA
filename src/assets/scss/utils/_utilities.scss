@@ -1,0 +1,13 @@
+$utilities: map-merge(
+	$utilities,
+	(
+		'writing-mode': (
+			property: writing-mode,
+			class: writing,
+			values: (
+				vertical: vertical-rl,
+				horizontal: horizontal-tb,
+			),
+		),
+	)
+);

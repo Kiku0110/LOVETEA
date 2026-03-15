@@ -1,0 +1,30 @@
+.filterBtnLarge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 195px;
+	height: 56px;
+	padding: 16px 16px 16px 12px;
+	font-weight: 700;
+	font-size: 20px;
+	color: $secondary-300;
+	background: transparent;
+	border: none;
+	&::after {
+		font-family: 'Material Symbols Outlined'; // 指定 Material Symbols 字體 (確保 HTML 已引入)
+		content: '\e145'; // 帶入 Icon 的 Unicode
+		font-size: 24px;
+		color: inherit; // 跟隨文字顏色
+	}
+	&:hover {
+		color: $neutral-700;
+		background-color: $secondary-500;
+	}
+	&:focus {
+		color: $neutral-700;
+		background-color: $secondary-500;
+		&::after {
+			content: '\remove';
+		}
+	}
+}

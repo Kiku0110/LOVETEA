@@ -1,0 +1,14 @@
+.customer-tag {
+	width: fit-content;
+	height: 40px;
+	padding: 8px 16px;
+	border-radius: 0;
+	font-weight: 300;
+	color: $primary-900;
+	background-color: $neutral-300;
+	@include pad {
+		padding: 4px 16px;
+		color: $primary-100;
+		background-color: $neutral-700;
+	}
+}

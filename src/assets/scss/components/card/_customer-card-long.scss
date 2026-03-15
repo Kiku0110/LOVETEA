@@ -1,0 +1,45 @@
+.customer-card-long {
+	width: 100%;
+	border-radius: 0;
+	border: 1px solid transparent; // hover 不抖動
+	// 確保卡片內的絕對定位不會超出邊框
+	overflow: hidden;
+	background-color: $neutral-700;
+	.card-img-top {
+		height: 408px;
+		border-radius: 0;
+		object-fit: cover;
+	}
+	.card-body {
+		padding: 24px 12px;
+		text-align: start;
+	}
+	.card-title {
+		font-weight: 400;
+		color: $secondary-100;
+		margin-bottom: 12px;
+	}
+	.card-text {
+		font-weight: 300;
+		color: $secondary-300;
+	}
+	/* 自訂一個可以限制行數的類別 */
+	.text-line-clamp-2 {
+		display: -webkit-box; // Webkit 彈性盒模型
+		-webkit-line-clamp: 2; // 設定顯示行數
+		-webkit-box-orient: vertical; // 設定盒子垂直排列
+		overflow: hidden; // 隱藏超出第二行的部分
+	}
+	&:hover {
+		cursor: pointer;
+		border: 1px solid $secondary-500;
+		// 可選：Hover 時讓圖片變暗或模糊，按鈕更明顯
+		.card-img-top {
+			filter: brightness(0.7);
+		}
+		.card-title {
+			text-decoration: underline;
+			text-decoration-color: $secondary-100;
+		}
+	}
+}

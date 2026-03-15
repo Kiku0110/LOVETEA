@@ -1,0 +1,99 @@
+.hero-carousel {
+	/* 保留定位：確保整組元件橫跨底部 */
+	.carousel-indicators-container {
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		right: 0;
+		z-index: 3;
+	}
+	/* 自定義指示器樣式 */
+	.carousel-indicators [data-bs-target] {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		border: 1px solid $secondary-500;
+		background-color: transparent;
+		margin: 0px 16px; // 指示器之間間距
+	}
+	.carousel-indicators .active {
+		background-color: $secondary-500;
+	}
+	/* 重設 prev, next 按鈕寬度，讓 gap-4 (16px) 生效 */
+	.custom-arrow {
+		position: static; // 移除絕對定位
+		width: auto; // 移除預設的 15% 寬度
+		opacity: 1; // 確保箭頭清晰
+	}
+	/* 自定義左右按鈕樣式 */
+	.custom-control-prev,
+	.custom-control-next {
+		background: none;
+		border: none;
+		padding: 0;
+		width: 30px; // 調整按鈕大小
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	/* 調整圖示大小 */
+	.carousel-control-prev-icon,
+	.carousel-control-next-icon {
+		width: 16px;
+		height: 16px;
+	}
+	/* 五段式漸層遮罩 */
+	.gradientMask {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 0.2) 20%,
+			rgba(0, 0, 0, 0) 50%,
+			rgba(0, 0, 0, 0.2) 80%,
+			rgba(0, 0, 0, 1) 100%
+		);
+		z-index: 2;
+	}
+}
+/* 修正 1：確保所有容器底色為黑，消除白閃 */
+.carousel,
+.carousel-inner,
+.carousel-item {
+	background-color: #000 !important;
+}
+/* 修正 2：將遮罩固定在內層容器，不隨圖片滑動 */
+.carousel-inner {
+	position: relative;
+}
+.carousel-inner::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	// 設定黑色透明度，0.4 代表 40% 的黑，可依需求調整
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 1; // 位於圖片 (0) 之上
+	pointer-events: none; // 確保不影響按鈕點擊
+}
+/* 確保圖片在遮罩下方 */
+.carousel-item img {
+	height: 960px;
+	object-fit: cover;
+	z-index: 0;
+	@include pad {
+		height: 628px;
+	}
+}
+/* 確保文字和控制按鈕在遮罩上方 */
+.custom-carousel-caption,
+.carousel-indicators-container {
+	z-index: 3;
+}

@@ -1,0 +1,22 @@
+.customerNoIconBtn-primary-500 {
+	width: 184px;
+	height: 56px;
+	padding: 16px 44px;
+	border: none;
+	color: $neutral-700;
+	font-weight: 700;
+	white-space: nowrap; // 避免文字在小螢幕時強行斷行
+	background-color: $secondary-500;
+	&:hover {
+		color: $secondary-100;
+		background-color: $primary-300;
+	}
+	&:focus {
+		color: $secondary-100;
+		background-color: $primary-500;
+	}
+	@include pad {
+		width: 164px;
+		padding: 16px 33.5px;
+	}
+}

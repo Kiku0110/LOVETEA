@@ -1,0 +1,24 @@
+.customerBtn-secondary-500 {
+	width: 184px;
+	height: 56px;
+	padding: 16px 40px;
+	border: 1px solid $secondary-500;
+	background-color: transparent;
+	color: $secondary-500;
+	font-weight: 300;
+	white-space: nowrap; // 避免文字在小螢幕時強行斷行
+	&:hover {
+		border: 1px solid $secondary-100;
+		color: $primary-900;
+		background-color: $secondary-100;
+	}
+	&:focus {
+		border: 1px solid $primary-100;
+		color: $primary-900;
+		background-color: $primary-100;
+	}
+	@include pad {
+		width: 164px;
+		padding: 16px 50px;
+	}
+}

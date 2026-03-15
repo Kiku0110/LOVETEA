@@ -1,0 +1,25 @@
+.customer-inputGroup {
+	width: 196px;
+	height: 48px;
+	.form-select {
+		padding: 12px 20px;
+		border-radius: 0;
+		border: 1px solid $secondary-500;
+		--bs-form-select-bg-img: none;
+		font-weight: 300;
+		color: $secondary-100;
+		background-color: transparent;
+	}
+	.form-select option {
+		color: black;
+	}
+	.input-group-text {
+		width: 48px;
+		width: 48px;
+		padding: 12px;
+		border-radius: 0;
+		border: 1px solid $secondary-500;
+		color: $secondary-500;
+		background-color: transparent;
+	}
+}

@@ -1,0 +1,32 @@
+.accordion-primary-900 {
+	--bs-accordion-color: #bfb3a8; // accordion-body 文字顏色
+	--bs-accordion-bg: transparent; // accordion-body 背景色
+
+	--bs-accordion-btn-color: #e5dcd3; // btn 文字顏色
+	--bs-accordion-active-color: #e5dcd3; // btn active 狀態的文字顏色
+	--bs-accordion-btn-bg: #2c2926; // btn 背景顏色
+	--bs-accordion-active-bg: #2c2926; // btn active 背景顏色
+	--bs-accordion-btn-padding-y: 1rem;
+	--bs-accordion-btn-padding-x: 1rem;
+	--bs-accordion-btn-focus-box-shadow: none;
+
+	--bs-accordion-body-padding-y: 0; // accordion-body 上下 padding
+	--bs-accordion-body-padding-x: 0.75rem; // accordion-body 左右 padding
+}
+.accordion-button {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+//更改 icon 顏色
+/* Bootstrap 預設使用 SVG 的 stroke 來繪製箭頭，將顏色代碼（例如 #ff5722）中的 # 替換為 %23 */
+// 修改「摺疊」狀態的圖示顏色
+.accordion-button::after {
+	content: '';
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23CF9D6C' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>");
+}
+// 修改「展開」狀態的圖示顏色
+.accordion-button:not(.collapsed)::after {
+	content: '';
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23CF9D6C' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>");
+}

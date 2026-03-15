@@ -1,0 +1,16 @@
+.customer-listGroup {
+	.list-group {
+		background-color: transparent;
+	}
+	.list-group-item {
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		margin-bottom: 8px;
+	}
+	@include pad {
+		.list-group-item {
+			margin-bottom: 0;
+		}
+	}
+}

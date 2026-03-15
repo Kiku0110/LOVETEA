@@ -1,0 +1,74 @@
+.customer-card {
+	border: none;
+	width: 100%;
+	height: 336px;
+	padding: 32px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	background-color: transparent;
+	.card-img-top {
+		width: 96px;
+		height: 96px;
+		object-fit: cover;
+		margin-bottom: 32px;
+		opacity: 0.7;
+	}
+	.card-body {
+		padding: 0;
+	}
+	.card-title {
+		font-weight: 400;
+		color: $secondary-100;
+		margin-bottom: 8px;
+	}
+	.card-text {
+		font-weight: 700;
+		color: $secondary-300;
+	}
+	.vertical-line {
+		position: absolute;
+		left: 50%;
+		// 初始位置：在中心點偏下一點
+		top: 55%;
+		width: 2px;
+		height: 48px; // 線條長度
+		background-color: $secondary-500;
+		opacity: 0;
+		transform: translateX(-50%); // 僅水平置中
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); // 加上貝茲曲線
+		z-index: 1;
+	}
+	&:hover {
+		cursor: pointer;
+		.card-img-top {
+			border: 1px solid $secondary-500;
+			opacity: 1;
+		}
+		.vertical-line {
+			opacity: 1;
+			// 計算間距：
+			// 假設文字內容高度約為 80px，一半就是 40px。
+			// 如果要距離文字底部再 40px，線條頂端應該位在中心點下方 80px 處。
+			top: calc(50% + 80px);
+			// 若需要更精準，可依據實際文字高度微調上面的 80px 值
+		}
+	}
+
+	@include pad {
+		padding: 24px 0;
+		height: 204px;
+		.card-img-top {
+			margin-bottom: 8px;
+		}
+		.card-title {
+			margin-bottom: 4px;
+		}
+		.vertical-line {
+			display: none;
+		}
+	}
+}

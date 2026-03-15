@@ -1,0 +1,27 @@
+// FavoriteSection
+.overflow-x-auto {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+.overflow-favoriteCard {
+	@include pad {
+		.row {
+			flex-wrap: nowrap; //不換行
+			margin: 0 -12px;
+			.customer-card-maskLarge {
+				width: 306px;
+			}
+			.card-img-top {
+				height: 300px;
+			}
+			.card-body {
+				height: 108px;
+			}
+		}
+		//清除原本格線系統
+		.col-md-3 {
+			width: unset;
+			padding: 0px 12px;
+		}
+	}
+}

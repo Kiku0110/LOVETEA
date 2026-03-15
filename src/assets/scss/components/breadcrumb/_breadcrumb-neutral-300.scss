@@ -1,0 +1,23 @@
+.breadcrumb-neutral-300 {
+	// 移除 Bootstrap 預設的引號分隔符號
+	--bs-breadcrumb-divider: '';
+
+	.breadcrumb-item {
+		font-weight: 300;
+		color: $neutral-300;
+
+		// 更改分隔符號
+		& + .breadcrumb-item::before {
+			// 設定 Material Symbols 字體
+			font-family: 'Material Symbols Outlined';
+			content: '\e5e1';
+			vertical-align: middle;
+			font-size: 16px;
+			color: $neutral-300;
+		}
+	}
+	.breadcrumb-item.active {
+		font-weight: 700;
+		color: $secondary-100;
+	}
+}

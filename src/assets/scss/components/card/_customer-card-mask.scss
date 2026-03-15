@@ -1,0 +1,62 @@
+.customer-card-mask {
+	width: 100%;
+	border-radius: 0;
+	border: 0;
+	// 確保卡片內的絕對定位不會超出邊框
+	overflow: hidden;
+	background-color: transparent;
+	.card-img-top {
+		height: 300px;
+		border-radius: 0;
+		object-fit: cover;
+	}
+	.card-body {
+		padding: 24px;
+		text-align: center;
+	}
+	.card-title {
+		font-weight: 400;
+		color: $secondary-100;
+		margin-bottom: 4px;
+	}
+	.card-text {
+		color: $secondary-300;
+	}
+	.card-actions-overlay {
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease-in-out;
+		// 預設位置微調：稍微往下偏一點，做出由下往上浮現的效果
+		transform: translate(-50%, -40%) !important;
+		z-index: 10;
+	}
+	.btn {
+		width: 40px;
+		height: 40px;
+		color: $neutral-100;
+		padding: 8px;
+	}
+	.btn-primary-700 {
+		background-color: #403a27e5;
+	}
+	&:hover {
+		cursor: pointer;
+		background-color: $primary-500;
+		.card-actions-overlay {
+			opacity: 1;
+			visibility: visible;
+			// Hover 時回到正中心
+			transform: translate(-50%, -50%) !important;
+		}
+
+		// 可選：Hover 時讓圖片變暗或模糊，按鈕更明顯
+		.card-img-top {
+			filter: brightness(0.7);
+		}
+	}
+	@include pad {
+		.card-img-top {
+			height: 224px;
+		}
+	}
+}

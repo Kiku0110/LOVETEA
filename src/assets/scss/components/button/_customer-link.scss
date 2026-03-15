@@ -1,0 +1,14 @@
+.customer-link {
+	width: fit-content;
+	height: 40px;
+	padding: 8px 12px;
+	font-size: 20px;
+	font-weight: 700;
+	color: $secondary-300;
+	&:hover {
+		color: $secondary-500;
+	}
+	&:focus {
+		color: $secondary-500;
+	}
+}
