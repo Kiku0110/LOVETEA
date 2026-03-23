@@ -235,21 +235,41 @@ function SingleProduct() {
 									/>
 								</div>
 								{/* 加入購物車、直接購買 btn */}
-								<div className="d-flex gap-6 mb-md-11 mb-7">
-									<button
-										type="button"
-										className="btn customerBtn-secondary-500 w-100"
-										onClick={() => addCart(product.id, selectedQty)}
-									>
-										加入購物車
-									</button>
-									<button
-										type="button"
-										className="btn customerNoIconBtn-primary-500 w-100"
-										onClick={() => handleBuy()}
-									>
-										直接購買
-									</button>
+								<div className="d-block d-md-none d-lg-block">
+									<div className="d-flex gap-6 mb-md-11 mb-7">
+										<button
+											type="button"
+											className="btn customerBtn-secondary-500 w-100"
+											onClick={() => addCart(product.id, selectedQty)}
+										>
+											加入購物車
+										</button>
+										<button
+											type="button"
+											className="btn customerNoIconBtn-primary-500 w-100"
+											onClick={() => handleBuy()}
+										>
+											直接購買
+										</button>
+									</div>
+								</div>
+								<div className="d-none d-md-block d-lg-none">
+									<div className="d-grid gap-6 mb-md-11">
+										<button
+											type="button"
+											className="btn customerBtn-secondary-500 w-100"
+											onClick={() => addCart(product.id, selectedQty)}
+										>
+											加入購物車
+										</button>
+										<button
+											type="button"
+											className="btn customerNoIconBtn-primary-500 w-100"
+											onClick={() => handleBuy()}
+										>
+											直接購買
+										</button>
+									</div>
 								</div>
 								{/* 產品說明、注意事項、產品規格 */}
 								<div className="d-flex flex-column gap-4">
