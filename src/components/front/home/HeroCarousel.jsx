@@ -151,7 +151,7 @@ function HeroCarousel() {
 									<br />
 									感受茶香流動，找回內心的平靜與溫暖。
 								</p>
-								<div className="d-flex gap-6">
+								<div className="d-flex gap-4">
 									<button
 										type="button"
 										className="btn customerBtn-secondary-500"
