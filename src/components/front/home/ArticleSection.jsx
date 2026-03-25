@@ -83,7 +83,7 @@ function ArticleSection() {
 					</div>
 					{/* Mobile */}
 					<div className="overflow-auto overflow-card d-block d-md-none">
-						<div className="row">
+						<div className="row g-0">
 							{articles.map((article) => (
 								<div className="col-md-3" key={article.id}>
 									<div className="card customer-card-long h-100">

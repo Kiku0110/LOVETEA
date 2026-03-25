@@ -1,5 +1,8 @@
 // 標籤基本樣式
+html,
 body {
+	max-width: 100%;
+	overflow-x: hidden; // 防止整頁左右晃動
 	letter-spacing: 0.02em;
 	background-color: $primary-900;
 }
