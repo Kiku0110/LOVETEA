@@ -52,9 +52,12 @@ function Footer() {
 						<div className="d-flex flex-column">
 							<p className="text-secondary-300 mb-6">CONTACT</p>
 							<div className="d-flex flex-column mb-6">
-								<p className="text-secondary-100 fw-light mb-2">
+								<a
+									href="mailto:service@lovetea.com"
+									className="text-secondary-100 fw-light mb-2 text-decoration-none"
+								>
 									service@lovetea.com
-								</p>
+								</a>
 								<p className="text-secondary-100 fw-light">
 									臺北市中正區重慶南路一段122號
 								</p>

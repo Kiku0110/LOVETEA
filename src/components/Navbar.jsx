@@ -59,17 +59,17 @@ function Navbar() {
 						</Link>
 					</li>
 					<div className="d-flex gap-3">
-						<li className="nav-item d-none d-md-block">
+						<li className="nav-item d-none d-lg-block">
 							<Link className="nav-link customer-link" to="/products">
 								商品分類
 							</Link>
 						</li>
-						<li className="nav-item d-none d-md-block">
+						<li className="nav-item d-none d-lg-block">
 							<Link className="nav-link customer-link" to="/about">
 								關於樂茶
 							</Link>
 						</li>
-						<li className="nav-item d-none d-md-block">
+						<li className="nav-item d-none d-lg-block">
 							<Link className="nav-link customer-link" to="/brand">
 								品牌專欄
 							</Link>
@@ -106,7 +106,7 @@ function Navbar() {
 							</Link>
 						</li>
 						{/* Mobile: 漢堡選單按鈕 */}
-						<li className="nav-item d-md-none d-block">
+						<li className="nav-item d-lg-none d-block">
 							<button
 								type="button"
 								className="btn customerBtn-transparent"
@@ -155,7 +155,7 @@ function Navbar() {
 				>
 					<div className="d-flex flex-column">
 						<ul className="nav d-flex flex-column mb-11">
-							<li className="nav-item d-md-none d-block">
+							<li className="nav-item d-lg-none d-block">
 								<Link
 									className="nav-link w-100 headerLink d-flex justify-content-between align-items-center"
 									to="/products"
@@ -166,7 +166,7 @@ function Navbar() {
 									</span>
 								</Link>
 							</li>
-							<li className="nav-item d-md-none d-block">
+							<li className="nav-item d-lg-none d-block">
 								<Link
 									className="nav-link w-100 headerLink d-flex justify-content-between align-items-center"
 									to="/about"
@@ -177,7 +177,7 @@ function Navbar() {
 									</span>
 								</Link>
 							</li>
-							<li className="nav-item d-md-none d-block">
+							<li className="nav-item d-lg-none d-block">
 								<Link
 									className="nav-link w-100 headerLink d-flex justify-content-between align-items-center"
 									to="/brand"
@@ -189,7 +189,7 @@ function Navbar() {
 								</Link>
 							</li>
 						</ul>
-						<div className="d-md-none d-block">
+						<div className="d-lg-none d-block">
 							<button
 								type="button"
 								className="btn w-100 headerLink bg-neutral-500 d-flex justify-content-between align-items-center"
