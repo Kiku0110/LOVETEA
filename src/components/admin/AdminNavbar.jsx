@@ -12,8 +12,7 @@ function AdminNavbar() {
 	const handleLogout = async (e) => {
 		e.preventDefault();
 		try {
-			// eslint-disable-next-line no-unused-vars
-			const response = await axios.post(`${API_BASE}/logout`);
+			await axios.post(`${API_BASE}/logout`);
 			// 將 expires 設為過去的時間，讓瀏覽器自動刪除它
 			document.cookie = `hexToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
 			navigate('/');

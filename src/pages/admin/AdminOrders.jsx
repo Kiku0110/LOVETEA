@@ -81,8 +81,7 @@ function AdminOrders() {
 		};
 
 		try {
-			// eslint-disable-next-line no-unused-vars
-			const response = await axios.put(
+			await axios.put(
 				`${API_BASE}/api/${API_PATH}/admin/order/${id}`,
 				orderData,
 			);

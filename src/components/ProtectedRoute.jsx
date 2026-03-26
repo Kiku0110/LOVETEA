@@ -27,8 +27,7 @@ function ProtectedRoute({ children }) {
 		// 檢查管理員權限
 		const checkLogin = async () => {
 			try {
-				// eslint-disable-next-line no-unused-vars
-				const response = await axios.post(`${API_BASE}/api/user/check`);
+				await axios.post(`${API_BASE}/api/user/check`);
 				setIsAuth(true);
 			} catch (error) {
 				showError(error.response?.data.message);

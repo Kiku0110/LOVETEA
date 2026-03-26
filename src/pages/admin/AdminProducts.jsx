@@ -186,8 +186,7 @@ function AdminProducts() {
 
 		//axios[method] 可依 if 條件切換成 axios.post 或 axios.put
 		try {
-			// eslint-disable-next-line no-unused-vars
-			const response = await axios[method](url, productData);
+			await axios[method](url, productData);
 			if (method === 'post') {
 				showSuccess('成功建立商品！');
 			}

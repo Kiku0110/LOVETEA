@@ -29,11 +29,7 @@ function Cart() {
 				product_id: productId,
 				qty,
 			};
-			// eslint-disable-next-line no-unused-vars
-			const response = await axios.put(
-				`${API_BASE}/api/${API_PATH}/cart/${cardId}`,
-				{ data },
-			);
+			await axios.put(`${API_BASE}/api/${API_PATH}/cart/${cardId}`, { data });
 			dispatch(createAsyncGetCart());
 		} catch (error) {
 			showError(error.response.data.message);
@@ -83,10 +79,7 @@ function Cart() {
 		});
 		if (result.isConfirmed) {
 			try {
-				// eslint-disable-next-line no-unused-vars
-				const response = await axios.delete(
-					`${API_BASE}/api/${API_PATH}/carts`,
-				);
+				await axios.delete(`${API_BASE}/api/${API_PATH}/carts`);
 				Swal.fire({
 					text: '已清除購物車內容',
 					icon: 'success',
