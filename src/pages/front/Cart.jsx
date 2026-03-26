@@ -71,7 +71,7 @@ function Cart() {
 		const result = await Swal.fire({
 			title: '確定要清空購物車嗎？',
 			text: '這將會移除購物車內的所有商品！',
-			icon: 'danger',
+			icon: 'warning',
 			showCancelButton: true,
 			confirmButtonColor: '#d33',
 			confirmButtonText: '全部清空',

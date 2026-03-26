@@ -143,19 +143,9 @@ function ProductsIndex() {
 	// 當「原始資料」或「URL 參數」改變時執行
 	useEffect(() => {
 		if (products.length === 0) return;
-
-		const filteredProducts = products.filter((product) => {
-			const matchSeries = series ? product.series === series : true;
-			const matchCategory = category ? product.category === category : true;
-			const matchQuery = query
-				? product.title.toLowerCase().includes(query.toLowerCase())
-				: true;
-			return matchSeries && matchCategory && matchQuery;
-		});
-
 		// 篩選完後，從第 1 頁開始顯示篩選後的結果
 		updatePageData(filteredProducts, 1);
-	}, [products, series, category, query, updatePageData]);
+	}, [filteredProducts, updatePageData, products.length]);
 
 	return (
 		<>

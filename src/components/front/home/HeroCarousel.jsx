@@ -14,7 +14,7 @@ function HeroCarousel() {
 					id="carouselExampleCaptions"
 					className="carousel slide position-relative"
 					data-bs-ride="carousel"
-					data-bs-interval="1500"
+					data-bs-interval="5000"
 					data-bs-pause="false"
 				>
 					{/* 漸層遮罩 */}
