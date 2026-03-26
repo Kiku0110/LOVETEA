@@ -126,8 +126,7 @@ function AdminOrders() {
 		orderModalRef.current = new bootstrap.Modal('#orderModal', {
 			keyboard: false,
 		});
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [showSuccess, showError]);
 
 	const openModal = (type, order) => {
 		setModalType(type);

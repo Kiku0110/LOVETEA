@@ -36,8 +36,7 @@ function ProtectedRoute({ children }) {
 			}
 		};
 		checkLogin();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [showError]);
 	if (isLoading) {
 		return <Loading show={isLoading} text={'載入中...'} />;
 	}

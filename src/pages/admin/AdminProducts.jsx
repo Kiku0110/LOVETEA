@@ -255,8 +255,7 @@ function AdminProducts() {
 		productModalRef.current = new bootstrap.Modal('#productModal', {
 			keyboard: false,
 		});
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [showSuccess, showError]);
 
 	const openModal = (type, product) => {
 		setModalType(type);

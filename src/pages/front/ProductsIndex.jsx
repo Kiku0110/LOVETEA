@@ -137,8 +137,7 @@ function ProductsIndex() {
 			}
 		};
 		getProducts();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [updatePageData, showError]);
 
 	// 當「原始資料」或「URL 參數」改變時執行
 	useEffect(() => {

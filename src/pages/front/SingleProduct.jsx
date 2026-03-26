@@ -85,8 +85,7 @@ function SingleProduct() {
 			}
 		};
 		handleView(id);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [id]);
+	}, [id, showError]);
 
 	return (
 		<>
