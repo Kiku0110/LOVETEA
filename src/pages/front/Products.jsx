@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, Outlet, useNavigate, useSearchParams } from 'react-router';
-import bgImage from '../../assets/images/banner/products-banner.svg';
+import bgImage from '../../assets/images/banner/products-banner.jpg';
 import Banner from '../../components/Banner';
 
 function Products() {

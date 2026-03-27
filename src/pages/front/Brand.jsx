@@ -1,4 +1,4 @@
-import bgImage from '../../assets/images/banner/brand-banner.svg';
+import bgImage from '../../assets/images/banner/brand-banner.jpg';
 import Banner from '../../components/Banner';
 import ArticleSection from '../../components/front/home/ArticleSection';
 

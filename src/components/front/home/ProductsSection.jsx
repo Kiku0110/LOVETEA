@@ -76,6 +76,8 @@ function ProductsSection() {
 										src={product.imageUrl}
 										className="card-img-top"
 										alt={product.title}
+										decoding="async"
+										loading="lazy"
 									/>
 									{/* 按鈕容器 */}
 									<div className="card-actions-overlay position-absolute top-50 start-50 translate-middle">
@@ -114,6 +116,8 @@ function ProductsSection() {
 										src={product.imageUrl}
 										className="card-img-top"
 										alt={product.title}
+										decoding="async"
+										loading="lazy"
 									/>
 									<button
 										type="button"

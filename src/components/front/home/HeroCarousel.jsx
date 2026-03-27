@@ -1,7 +1,7 @@
-import Teapot1920 from '../../../assets/images/hero/hero-teapot-1920.svg';
-import Tae1920 from '../../../assets/images/hero/hero-tea-1920.svg';
-import TeaLaef1920 from '../../../assets/images/hero/hero-tealeaf-1920.svg';
-import TeaMountain1920 from '../../../assets/images/hero/hero-teamountain-1920.svg';
+import Teapot1920 from '../../../assets/images/hero/hero-teapot-1920.jpg';
+import Tae1920 from '../../../assets/images/hero/hero-tea-1920.jpg';
+import TeaLaef1920 from '../../../assets/images/hero/hero-tealeaf-1920.jpg';
+import TeaMountain1920 from '../../../assets/images/hero/hero-teamountain-1920.jpg';
 import { useNavigate } from 'react-router';
 
 function HeroCarousel() {
@@ -19,7 +19,7 @@ function HeroCarousel() {
 				>
 					{/* 漸層遮罩 */}
 					<div className="gradientMask"></div>
-					<div className="carousel-indicators-container d-flex justify-content-center align-items-center gap-4">
+					<div className="carousel-indicators-container d-flex justify-content-center align-items-center gap-4 mb-md-11 mb-7">
 						<button
 							className="carousel-control-prev custom-control-prev custom-arrow"
 							type="button"
@@ -75,19 +75,35 @@ function HeroCarousel() {
 					</div>
 					<div className="carousel-inner">
 						<div className="carousel-item active">
-							<img src={Teapot1920} className="d-block w-100" alt="輪播圖" />
+							<img
+								src={Teapot1920}
+								className="d-block w-100"
+								alt="輪播圖"
+								decoding="async"
+							/>
 						</div>
 						<div className="carousel-item">
-							<img src={Tae1920} className="d-block w-100" alt="輪播圖" />
+							<img
+								src={Tae1920}
+								className="d-block w-100"
+								alt="輪播圖"
+								decoding="async"
+							/>
 						</div>
 						<div className="carousel-item">
-							<img src={TeaLaef1920} className="d-block w-100" alt="輪播圖" />
+							<img
+								src={TeaLaef1920}
+								className="d-block w-100"
+								alt="輪播圖"
+								decoding="async"
+							/>
 						</div>
 						<div className="carousel-item">
 							<img
 								src={TeaMountain1920}
 								className="d-block w-100"
 								alt="輪播圖"
+								decoding="async"
 							/>
 						</div>
 					</div>

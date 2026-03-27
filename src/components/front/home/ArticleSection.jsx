@@ -1,7 +1,7 @@
-import articleImg from '../../../assets/images/home/article images-1.svg';
-import articleImg2 from '../../../assets/images/home/article images-2.svg';
-import articleImg3 from '../../../assets/images/home/article images-3.svg';
-import articleImg4 from '../../../assets/images/home/article images-4.svg';
+import articleImg from '../../../assets/images/home/article images-1.jpg';
+import articleImg2 from '../../../assets/images/home/article images-2.jpg';
+import articleImg3 from '../../../assets/images/home/article images-3.jpg';
+import articleImg4 from '../../../assets/images/home/article images-4.jpg';
 
 const articles = [
 	{
@@ -66,6 +66,8 @@ function ArticleSection() {
 											src={article.image}
 											className="card-img-top"
 											alt="文章首圖"
+											decoding="async"
+											loading="lazy"
 										/>
 										<div className="card-body">
 											<span className="fw-light text-primary-100 mb-1">
@@ -91,6 +93,8 @@ function ArticleSection() {
 											src={article.image}
 											className="card-img-top"
 											alt="文章首圖"
+											decoding="async"
+											loading="lazy"
 										/>
 										<div className="card-body">
 											<span className="fw-light text-primary-100 mb-1">

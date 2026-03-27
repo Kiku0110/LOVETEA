@@ -1,6 +1,6 @@
-import person1 from '../../../assets/images/home/person-1.svg';
-import person2 from '../../../assets/images/home/person-2.svg';
-import person3 from '../../../assets/images/home/person-3.svg';
+import person1 from '../../../assets/images/home/person-1.jpg';
+import person2 from '../../../assets/images/home/person-2.jpg';
+import person3 from '../../../assets/images/home/person-3.jpg';
 
 function CraftSection() {
 	const craftPerson = [
@@ -46,6 +46,8 @@ function CraftSection() {
 										src={person.image}
 										className="card-img-top rounded-circle"
 										alt={person.name}
+										decoding="async"
+										loading="lazy"
 									/>
 									<div className="card-body">
 										<h5 className="card-title">{person.name}</h5>

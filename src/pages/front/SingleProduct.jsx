@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, useParams, useNavigate } from 'react-router';
-import bgImage from '../../assets/images/banner/productInfo-banner.svg';
+import bgImage from '../../assets/images/banner/productInfo-banner.jpg';
 import Banner from '../../components/Banner';
 import Select from '../../components/front/singleProduct/Select';
 import FavoriteSection from '../../components/front/singleProduct/FavoriteSection';
@@ -128,6 +128,7 @@ function SingleProduct() {
 											src={product.imageUrl}
 											className="w-100 img-fluid object-fit-cover"
 											alt={product.title}
+											decoding="async"
 										/>
 									</div>
 									<div className="col-6">
@@ -135,6 +136,8 @@ function SingleProduct() {
 											src={product.imagesUrl?.[0]}
 											className="img-fluid object-fit-cover"
 											alt={product.title}
+											decoding="async"
+											loading="lazy"
 										/>
 									</div>
 									<div className="col-6">
@@ -142,6 +145,8 @@ function SingleProduct() {
 											src={product.imagesUrl?.[1]}
 											className="img-fluid object-fit-cover"
 											alt={product.title}
+											decoding="async"
+											loading="lazy"
 										/>
 									</div>
 									<div className="col-6">
@@ -150,6 +155,8 @@ function SingleProduct() {
 												src={product.imagesUrl?.[2]}
 												className="img-fluid object-fit-cover"
 												alt={product.title}
+												decoding="async"
+												loading="lazy"
 											/>
 										) : (
 											''
@@ -161,6 +168,8 @@ function SingleProduct() {
 												src={product.imagesUrl?.[3]}
 												className="img-fluid object-fit-cover"
 												alt={product.title}
+												decoding="async"
+												loading="lazy"
 											/>
 										) : (
 											''

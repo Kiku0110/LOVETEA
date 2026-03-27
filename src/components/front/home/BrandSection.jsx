@@ -1,5 +1,5 @@
-import brandStoryImg from '../../../assets/images/home/Brand Story Tea Pouring 1.svg';
-import brandStoryImg2 from '../../../assets/images/home/Brand Story Tea Pouring 2.svg';
+import brandStoryImg from '../../../assets/images/home/Brand Story Tea Pouring 1.jpg';
+import brandStoryImg2 from '../../../assets/images/home/Brand Story Tea Pouring 2.jpg';
 
 const brandData = [
 	{
@@ -38,6 +38,8 @@ function BrandSection() {
 									src={brand.image}
 									className="w-100 h-100 object-fit-cover"
 									alt="背景圖"
+									decoding="async"
+									loading="lazy"
 								/>
 							</div>
 							<div className=" text-layer">

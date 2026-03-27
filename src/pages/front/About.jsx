@@ -1,8 +1,8 @@
 /* eslint-disable no-irregular-whitespace */
-import bgImage from '../../assets/images/banner/about-banner.svg';
-import storyImage from '../../assets/images/about/about-1.svg';
-import storyImage2 from '../../assets/images/about/about-2.svg';
-import storyImage3 from '../../assets/images/about/about-3.svg';
+import bgImage from '../../assets/images/banner/about-banner.jpg';
+import storyImage from '../../assets/images/about/about-1.jpg';
+import storyImage2 from '../../assets/images/about/about-2.jpg';
+import storyImage3 from '../../assets/images/about/about-3.jpg';
 import Banner from '../../components/Banner';
 import RoundedSection from '../../components/front/about/RoundedSection';
 
@@ -99,6 +99,8 @@ function About() {
 										alt="背景圖"
 										className="w-100 object-fit-cover rounded mb-9"
 										style={{ height: '480px' }}
+										decoding="async"
+										loading="lazy"
 									/>
 								</div>
 								{/* Mobile */}
@@ -108,6 +110,8 @@ function About() {
 										alt="背景圖"
 										className="w-100 object-fit-cover rounded mb-5"
 										style={{ height: '200px' }}
+										decoding="async"
+										loading="lazy"
 									/>
 								</div>
 								<h5 className="text-secondary-300 mb-md-7 mb-4">
@@ -168,6 +172,8 @@ function About() {
 													alt="背景圖"
 													className="w-100 object-fit-cover rounded mb-7"
 													style={{ height: '296px' }}
+													decoding="async"
+													loading="lazy"
 												/>
 											</div>
 											{/* Mobile */}
@@ -177,6 +183,8 @@ function About() {
 													alt="背景圖"
 													className="w-100 object-fit-cover rounded mb-6"
 													style={{ height: '200px' }}
+													decoding="async"
+													loading="lazy"
 												/>
 											</div>
 											<h5 className="text-secondary-100 mb-md-3 mb-1">
@@ -209,6 +217,8 @@ function About() {
 												alt="背景圖"
 												className="w-100 object-fit-cover rounded mb-7"
 												style={{ height: '296px' }}
+												decoding="async"
+												loading="lazy"
 											/>
 										</div>
 										{/* Mobile */}
@@ -218,6 +228,8 @@ function About() {
 												alt="背景圖"
 												className="w-100 object-fit-cover rounded mb-6"
 												style={{ height: '200px' }}
+												decoding="async"
+												loading="lazy"
 											/>
 										</div>
 										<h5 className="text-secondary-100 mb-md-3 mb-1">
