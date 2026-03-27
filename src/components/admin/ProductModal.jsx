@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react';
+
 function ProductModal({
 	modalType,
 	templateProduct,
@@ -16,6 +18,19 @@ function ProductModal({
 	handleAddColor,
 	handleDeleteColor,
 }) {
+	const fileInputRef = useRef(null);
+	const resetFileInput = () => {
+		if (fileInputRef.current) {
+			fileInputRef.current.value = '';
+		}
+	};
+	const handleFileChange = async (e) => {
+		await uploadImage(e); // 等待執行父元件傳來的 uploadImage
+		resetFileInput(); // 上傳成功清除 input 文字
+	};
+	useEffect(() => {
+		resetFileInput(); // 切換不同產品或開啟新視窗時呼叫
+	}, [templateProduct.id]); // 監聽產品 ID，ID 變了就代表換產品了
 	return (
 		<>
 			<div
@@ -65,10 +80,11 @@ function ProductModal({
 												<input
 													className="form-control"
 													type="file"
+													ref={fileInputRef}
 													name="fileUpload"
 													id="fileUpload"
 													accept=".jpg,.jpeg,.png"
-													onChange={(e) => uploadImage(e)}
+													onChange={(e) => handleFileChange(e)}
 												/>
 											</div>
 											<div className="mb-3">
