@@ -42,11 +42,11 @@ function ProductsSection() {
 				const limitedProducts = response.data.products.slice(0, 4);
 				setProducts(limitedProducts);
 			} catch (error) {
-				console.log(error.response.message);
+				showError(error.response.message);
 			}
 		};
 		getProducts();
-	}, []);
+	}, [showError]);
 
 	const handleView = async (id) => {
 		navigate(`/product/${id}`);

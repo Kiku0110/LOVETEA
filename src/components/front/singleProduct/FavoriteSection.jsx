@@ -60,11 +60,11 @@ function FavoriteSection() {
 				);
 				setProducts(response.data.products);
 			} catch (error) {
-				console.log(error.response.message);
+				showError(error.response.message);
 			}
 		};
 		getProducts();
-	}, []);
+	}, [showError]);
 
 	const handleView = async (id) => {
 		navigate(`/product/${id}`);
