@@ -51,10 +51,9 @@ function OrderModal({
 												type="text"
 												id="id"
 												name="id"
-												className="form-control"
-												placeholder="請輸入訂單編號"
+												className="form-control bg-light"
 												value={templateOrder.id}
-												onChange={(e) => handleModalInputChange(e)}
+												readOnly
 											/>
 										</div>
 									</div>

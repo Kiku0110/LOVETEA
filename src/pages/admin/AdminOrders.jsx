@@ -51,6 +51,7 @@ function AdminOrders() {
 				},
 			}));
 		} else {
+			if (name === 'id') return; // input name 為 id 就中斷執行
 			setTemplateOrder((preData) => ({
 				...preData,
 				[name]: type === 'checkbox' ? checked : value,
