@@ -38,7 +38,7 @@ function Login() {
 			//跳至後台產品管理列表
 			navigate('/admin/products');
 		} catch (error) {
-			showError(error.response.message);
+			showError(error.response.data.message);
 		}
 	};
 	useEffect(() => {
