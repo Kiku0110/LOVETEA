@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import Swal from 'sweetalert2';
@@ -22,6 +22,7 @@ function Checkout() {
 		mode: 'onChange',
 	});
 	const { showError } = useMessage();
+	const [loadingItemId, setLoadingItemId] = useState(null); // 記錄哪一個購物車品項正在更新
 
 	useEffect(() => {
 		dispatch(createAsyncGetCart());
@@ -31,6 +32,10 @@ function Checkout() {
 	const isCartEmpty = !cart.carts || cart.carts.length === 0;
 
 	const updateCart = async (cardId, productId, qty = 1) => {
+		// 當輸入值小於 1 或正在讀取中就不執行
+		if (qty < 1 || loadingItemId === cardId) return;
+
+		setLoadingItemId(cardId);
 		try {
 			const data = {
 				product_id: productId,
@@ -40,6 +45,8 @@ function Checkout() {
 			dispatch(createAsyncGetCart());
 		} catch (error) {
 			showError(error.response.data.message);
+		} finally {
+			setLoadingItemId(null);
 		}
 	};
 
@@ -189,6 +196,8 @@ function Checkout() {
 												aria-label="Sizing example input"
 												aria-describedby="inputGroup-sizing-sm"
 												defaultValue={cartItem.qty}
+												// 正在更新時禁用 input
+												disabled={loadingItemId === cartItem.id}
 												onChange={(e) =>
 													updateCart(
 														cartItem.id,
@@ -201,7 +210,15 @@ function Checkout() {
 												className="input-group-text"
 												id="inputGroup-sizing-sm"
 											>
-												{cartItem.product.unit}
+												{/* 根據狀態切換顯示單位或 Loading 圖示 */}
+												{loadingItemId === cartItem.id ? (
+													<span
+														className="spinner-border spinner-border-sm"
+														role="status"
+													></span>
+												) : (
+													cartItem.product.unit
+												)}
 											</span>
 										</div>
 									</td>
