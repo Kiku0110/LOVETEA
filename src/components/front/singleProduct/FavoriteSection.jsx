@@ -60,7 +60,7 @@ function FavoriteSection() {
 				);
 				setProducts(response.data.products);
 			} catch (error) {
-				showError(error.response.message);
+				showError(error.response.data.message);
 			}
 		};
 		getProducts();

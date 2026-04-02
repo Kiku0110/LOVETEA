@@ -42,7 +42,7 @@ function ProductsSection() {
 				const limitedProducts = response.data.products.slice(0, 4);
 				setProducts(limitedProducts);
 			} catch (error) {
-				showError(error.response.message);
+				showError(error.response.data.message);
 			}
 		};
 		getProducts();
